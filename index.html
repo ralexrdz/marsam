@@ -8,28 +8,127 @@
 	<title>Marsam Solar</title>
 	<style media="screen">
 
+    body {
+      margin: 0; padding: 0;
+      font-family: "Clan OT";
+    }
+
     section {
       width: 100vw;
+      border: 1px solid red;
+      height: 100vh;
     }
 
     #page {
-      widows: 700vw;
+      width: 700vw;
     }
 
     #page section {
       display: inline-block;
+      position: relative;
     }
 
-    #sec-1 #phrase1 {
-
+    section div.center{
+      position: absolute;
+      top: 25%; right: 25%; bottom: 25%; left:25%;
+      padding: 0% 10%;
     }
-    #sec-1 #phrase2 {
 
+    .right-background-img,
+    .left-background-img {
+      width: 50vw;
+      position: absolute;
+      top:0;
+      max-height: 100vh;
+      height: inherit;
     }
-    #sec-1 #description {
 
+    .left-background-img { left:0; }
+
+    .right-background-img { right:0; }
+
+    .right-background-img img,
+    .left-background-img img { width: 100%; height: 100%; }
+
+    /* ------------------ SEC 1 --------------------*/
+
+    #sec-1 { color: white; }
+
+      #sec-1 .screen {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left:0;
+        background-color: rgba(0,0,0, 0.3);
+      }
+
+      #sec-1 h3#phrase1,
+      #sec-1 h4#phrase2 {
+        color: #E5E5E5;
+        font-size: 30px;
+        line-height: 20px;
+      }
+
+      #sec-1 h3#phrase1 { font-weight: 500; }
+      #sec-1 h4#phrase2 { font-weight: 200; opacity: 0.8; }
+
+      #sec-1 p#description {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+      }
+
+      #sec-1 div.action-icon {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 26px;
+      }
+
+        #sec-1 div.action-icon .icon {
+          margin: 0% 45%;
+          border: 1px solid white;
+          height: 30px;
+        }
+
+
+    /* ------------------ SEC 2 --------------------*/
+
+    #sec-2 { color: #003865; vertical-align: top; display: flex;}
+
+    #sec-2 > div {
+      display: inline-block;
     }
-    
+
+    #sec-2 .background-img {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left:0;
+      opacity: 0.5;
+    }
+
+    #sec-2 .background-img img { width: 100%; height: 100%; }
+
+
+    #sec-2 #question {
+      color: #F1B434;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      flex: 2;
+    }
+
+    #sec-2 .circle-dragger { flex: 3; }
+
+      #sec-2 #pricing { flex: 5; }
+
+
+        #sec-2 #pricing h2 { font-size: 28px;	font-weight: 300;	line-height: 40px; }
+        #sec-2 #pricing p { font-size: 18px;	font-weight: 300;	line-height: 26px; }
+        #sec-2 #pricing #price.small-arrow { font-size: 15px;	font-weight: 500;	line-height: 18px; }
+        #sec-2 #pricing #btn-price { font-size: 14px;	font-weight: 500;	letter-spacing: 50px;	line-height: 0;	text-align: center; }
+      /*#sec-2 #btn-free-consultation.action-button
+    .backgro#contactsund-img(h3+h4+p+a#contact-link+h3+h4+a#tel+h3+#adress+#fb-icon+#tw-icon)*/
+
+
 
 	</style>
 </head>
@@ -40,16 +139,34 @@
 	<div id="page">
 		<section id="sec-1">
       <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207472/preview -->
-      #phrase1+#phrase2+#description+.action-icon
-      .left-background-img
-      .right-background-img
+      <div class="left-background-img"><img src="https://lorempixel.com/400/800/nature/1" alt=""></div>
+      <div class="right-background-img"><img src="https://lorempixel.com/400/800/nature/2" alt=""></div>
+      <div class="screen"></div>
+      <div class="center">
+        <h3 id="phrase1">Transforma tu energía</h3>
+        <h4 id="phrase2">Transforma tu vida</h4>
+        <p id="description">Imagina una fuente inagotable de energía limpia en tu hogar. Imagina ahorro, estabilidad y tranquilidad para tu familia.
+Marsam Solar te ayuda a generar tu propia energía y te ofrece hasta un 98% de ahorro en tu recibo de luz durante los próximos 25 años.</p>
+        <div class="action-icon">
+          <div class="icon"></div>
+          <div>SCROLL</div>
+        </div>
+      </div>
     </section>
     <section id="sec-2">
       <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207471/preview -->
-      #question
-      .circle-dragger
-      #pricing>(h2+p+#price.small-arrow+#btn-price#btn-free-consultation.action-button)
-      .backgro#contactsund-img(h3+h4+p+a#contact-link+h3+h4+a#tel+h3+#adress+#fb-icon+#tw-icon)
+      <div id="question">¿Cuánto gastas de luz?</div>
+      <div class="circle-dragger">
+        <div class="note">ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div>
+        <div id="circle"></div>
+      </div>
+      <div id="pricing">
+        <h2>Dinos cuánto gastas y te decimos cuánto puedes ahorrar con Marsam Solar</h2>
+        <p>Conoce los beneficios de tener paneles solares en México.</p>
+        <div id="price" class="small-arrow">$0-$800/bimensual</div>
+        <div id="btn-free-consultation" class="action-button">COTIZA SIN COSTO</div>
+      </div>
+      <div class="background-img"><img src="https://lorempixel.com/800/400/nature/3" alt=""></div>
     </section>
     <section id="sec-3">
       <!-- mockup  https://projects.invisionapp.com/d/main#/console/11431340/243207470/preview -->
@@ -75,7 +192,7 @@
       <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207466/preview -->
       .up-left-box
       .center-box>(.circle-dragger+div>(h3+.small-arrow+#btn-free-consultation.action-button))
-      #contacts.rigth>(h3+h4+p+a#contact-link+h3+h4+a#tel+h3+#adress+#fb-button.icon-button+#tw-button.icon-button)
+      .rigth>(h3+h4+p+a#contact-link+h3+h4+a#tel+h3+#adress+#fb-button.icon-button+#tw-button.icon-button)
     </section>
   </div>
   <div id="popups">
