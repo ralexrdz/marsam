@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +23,24 @@
     }
 
     @font-face {
-      src: url('Clan-OT-Normal.ttf') format("truetype");
-      font-family: "Clan OT Normal";
+      src: url('Clan-OT-Regular.ttf') format("truetype");
+      font-family: "Clan OT Regular";
+    }
+
+    @font-face {
+      src: url('Clan-OT-Medium.ttf') format("truetype");
+      font-family: "Clan OT Medium";
     }
 
 
     html, body {
-        font-family: "Clan OT Normal", Verdana, Tahoma;
+        font-family: "Clan OT Regular", Verdana, Tahoma;
         position: relative;
         height: 100%;
 
     }
     body {
-        font-size: 14px;
+        font-size: 18px;
         color:#000;
         margin: 0;
         padding: 0;
@@ -63,6 +69,12 @@
         align-items: center;
     }
 
+    .swiper-scrollbar-drag {
+      background-color: #F1B434;
+      height: 10px;
+      border-radius: 0%;
+    }
+
     #pager .swiper-pagination-bullet-active {
       background: #F1B434;
     }
@@ -70,55 +82,74 @@
       background: white;
     }
 
-    section {
+    body #logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #003865;
+      z-index: 10;
+      text-align: center;
+    }
+
+      body #logo img {
+        width: 40px;
+        margin: auto;
+        position: relative;
+        top: 10px;
+      }
+
+    .swiper-slide div {
       width: 100%;
       height: 100%;
     }
 
-    section#home {
+    h1, h2, h3, h4 {
+      margin-top: 0px;
+    }
+
+    p {
+      line-height: 26px;
+      margin-top: 20px;
+    }
+
+    #home {
       display: grid;
-      grid-template-columns: 20% 3fr 20%;
-      grid-template-rows: 10% 3fr 10%;
+      grid-template-columns: 2fr 2fr 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
       color: white;
     }
-      section#home #logo {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: #003865;
-      }
 
-        section#home #logo img {
-          width: 40px;
-          margin: auto;
-          position: relative;
-          top: 10px;
-        }
-
-      section#home .centro {
+      #home .centro {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-end: 4;
         z-index: 2;
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: right;
-        padding: 15%;
+        text-align: left;
         position: relative;
       }
 
-        section#home .centro h2 {
-
+        #home .centro h2 {
+          font-family: "Clan OT Medium";
+          line-height: 35px;
+          font-size: 38px;
+          margin-bottom: 20px;
+          margin-top: 0px;
         }
-        section#home .centro h3,
-        section#home .centro p {
+        #home .centro h3 {
           font-family: 'Clan OT Thin';
-          font-weight: normal;
+          font-size: 38px;
+          margin: 20px 0;
         }
 
-        section#home .centro > div {
+        #home .centro p {
+          font-weight: normal;
+          line-height: 26px;
+        }
+
+        #home .centro > div {
           position: absolute;
           bottom: 0;
           left: 45%;
@@ -126,54 +157,74 @@
           text-align: center;
         }
 
-        section#home .centro > div > .scroll {
-          font-size: 14px;
-          font-weight: bold;
-          margin-top: 10px;
+      #home .scroll {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        z-index: 2;
+        position: relative;
+      }
+
+      #home .scroll .texto {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      #home .scroll .icono {
+        height: 50px;
+        width: 25px;
+        border: 2px solid #F1B434;
+        border-radius: 35%;
+        margin: 0 auto;
+      }
+
+        #home .centro > div > .icono .punto{
+          background-color: #F1B434;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          position: absolute;
+          top: 10px;
+          left: 10px;
         }
 
-        section#home .centro > div > .icono {
-          height: 50px;
-          width: 25px;
-          border: 2px solid #F1B434;
-          border-radius: 35%;
-          margin: 0 auto;
-          position: relative;
-        }
-
-          section#home .centro > div > .icono .punto{
-            background-color: #F1B434;
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-          }
-
-      section#home .imagen {
+      #home .imagen {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 6;
         overflow:hidden;
         text-align: center;
       }
 
-        section#home .imagen img {
+        #home .imagen img {
             height: 100%;
             min-width:100%;
             max-width:none;
             margin:0 -100%;
         }
 
-    section#cotiza {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      grid-template-rows: 1fr 4fr 1fr;
-    }
+      #home .rayita {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        border-bottom: 2px solid #F1B434;
+        position: relative;
+      }
 
-      section#cotiza .imagen {
+        #home .rayita .puntito {
+          height: 7px;
+          width: 7px;
+          border-radius: 50%;
+          position: absolute;
+          background-color: #F1B434;
+          left: 0; top: 99.5%;
+        }
+
+      /*#cotiza .imagen {
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 1;
@@ -182,141 +233,130 @@
         text-align: center;
       }
 
-      section#cotiza .imagen img {
+      #cotiza .imagen img {
           height: 70%;
           min-width:70%;
           max-width:none;
           margin: 10% -100%;
-      }
+      }*/
 
-      section#cotiza .left {
+    #circulo {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:1fr 1fr 1fr 1fr;
+      width: 50vw;
+    }
+
+      #circulo .pregunta{
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        grid-template-rows: 2fr 2fr 3fr;
+        border-bottom: 2px solid #F1B434;
+        color: #F1B434;
+        position: relative;
+        font-size: 14px;
       }
 
-        section#cotiza .left .pregunta{
-          grid-column-start: 1;
-          grid-column-end: 2;
-          grid-row-start: 2;
-          grid-row-end: 3;
-          border-bottom: 3px solid #F1B434;
-          color: #F1B434;
-          position: relative;
-          font-size: 14px;
-        }
-
-          section#cotiza .left .pregunta span{
-            position: absolute;
-            bottom: 2px;
-            left: 15px;
-          }
-
-        section#cotiza .left .instruccion{
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 2;
-          color: #8E9AAF;
-          position: relative;
-          font-size: 10px;
-        }
-        section#cotiza .left .instruccion div{
-          width: 50%;
+        #circulo .pregunta span{
           position: absolute;
-          right: 0;
-          bottom: 0;
+          bottom: 7px;
+          left: 15px;
+          font-family: "Clan OT Medium";
+          font-size: 16px;
         }
 
-        section#cotiza .left .circulo-precios{
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 2;
-          grid-row-end: 4;
+      #circulo .instruccion{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        color: #8E9AAF;
+        position: relative;
+        font-size: 10px;
+      }
+      #circulo .instruccion div{
+        width: 50%;
+        position: absolute;
+        left: 0;
+        bottom: -80%;
+      }
+
+      #circulo .circulo-precios{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+        #circulo .circulo-precios .circulo {
+          width: 300px;
+          height: 300px;
+          border: 30px solid grey;
+          border-radius: 50%;
+          display: grid;
+          grid-template-columns: 1fr 6fr 1fr;
+          grid-template-rows: : 1fr 6fr 1fr;
+          border-left-color: #F1B434;
+          text-align: center;
+          /* TODO arreglar que sea grid*/
         }
-
-          section#cotiza .left .circulo-precios .circulo {
-            width: 300px;
-            height: 300px;
-            border: 30px solid grey;
-            border-radius: 50%;
-            display: grid;
-            grid-template-columns: 1fr 6fr 1fr;
-            grid-template-rows: : 1fr 6fr 1fr;
-            border-left-color: #F1B434;
-            text-align: center;
-          }
-          section#cotiza .left .circulo-precios .circulo .texto {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            color: #003865;
-            font-size: 14px;
-          }
-
-          section#cotiza .left .circulo-precios .circulo h4{
-            color: #003865;
-          }
-
-        section#cotiza .right{
+        #circulo .circulo-precios .circulo .texto {
           grid-column-start: 2;
           grid-column-end: 3;
           grid-row-start: 2;
           grid-row-end: 3;
-          display: grid;
-          grid-template-rows: 2fr 3fr 2fr 2fr 1fr 1fr 1fr;
           color: #003865;
-          padding: 0 30px;
-          text-align: left;
         }
 
-          section#cotiza .right h2.frase {
-            grid-row-start: 2;
-            grid-row-end: 3;
-          }
-          section#cotiza .right p.parrafo {
-            grid-row-start: 3;
-            grid-row-end: 4;
-          }
-          section#cotiza .right .paquete {
-            grid-row-start: 4;
-            grid-row-end: 5;
-            font-weight: bolder;
-          }
-          section#cotiza .right .paquete .flechita {
-            width: 0px;
-            height: 0px;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid  #F1B434;
-            display: inline-block;
-          }
-          section#cotiza .right .cotiza {
-            grid-row-start: 5;
-            grid-row-end: 6;
-          }
+        #circulo .circulo-precios .circulo h4{
+          color: #003865;
+          font-size: 18px;
+          line-height: 22px;
+        }
 
-          section#cotiza .right .cotiza button{
-            border: 3px solid #F1B434;
-            background-color: transparent;
-            color: #F1B434;
-            text-align: center;
-            padding: 20px;
-            font-weight: bolder;
-          }
+    #cotiza {
+        display: grid;
+        grid-template-columns: 3fr 1fr:
+        color: #003865;
+        padding: 0 30px;
+        text-align: left;
+        width: 50vw;
+      }
 
-    section#pasos{
+        #cotiza #texto h2.frase {
+        }
+        #cotiza #texto p.parrafo {
+        }
+        #cotiza #texto .paquete {
+        }
+        #cotiza #texto .paquete .flechita {
+          width: 0px;
+          height: 0px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid  #F1B434;
+          display: inline-block;
+        }
+        #cotiza #texto .cotiza {
+        }
+
+        #cotiza #texto .cotiza button{
+          border: 3px solid #F1B434;
+          background-color: transparent;
+          color: #F1B434;
+          text-align: center;
+          padding: 20px;
+          font-weight: bolder;
+        }
+
+    #pasos{
       display: grid;
       grid-template-columns: 1fr 2fr 2fr 1fr;
       grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
     }
 
-      section#pasos .arriba-izquierda {
+      #pasos .arriba-izquierda {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -326,10 +366,10 @@
         padding: 4% 8%;
         text-align: left;
       }
-        section#pasos .arriba-izquierda h3 {
+        #pasos .arriba-izquierda h3 {
           font-family: 'Clan OT Bold'
         }
-      section#pasos .centro {
+      #pasos .centro {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 3;
@@ -339,29 +379,29 @@
         top: 20px;
       }
 
-      section#pasos #pasos-swiper .swiper-slide {
+      #pasos #pasos-swiper .swiper-slide {
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
 
-        section#pasos #pasos-swiper .swiper-slide .left {
+        #pasos #pasos-swiper .swiper-slide .left {
           grid-column-start: 1;
           grid-column-end: 2;
         }
 
-        section#pasos #pasos-swiper .swiper-slide .right {
+        #pasos #pasos-swiper .swiper-slide .right {
           grid-column-start: 2;
           grid-column-end: 3;
         }
 
-        section#pasos #pasos-swiper .swiper-slide .texto {
+        #pasos #pasos-swiper .swiper-slide .texto {
           display: grid;
           grid-template-columns: 1fr 3fr;
           padding: 0 50px;
           color: white;
         }
 
-        section#pasos #pasos-swiper .swiper-slide .numero {
+        #pasos #pasos-swiper .swiper-slide .numero {
           display: inline-block;
           border: 2px solid white;
           border-radius: 50%;
@@ -373,20 +413,20 @@
           grid-column-end: 2;
         }
 
-        section#pasos #pasos-swiper .swiper-slide .paso {
+        #pasos #pasos-swiper .swiper-slide .paso {
           display: inline-block;
           grid-column-start: 2;
           grid-column-end: 3;
         }
 
-    section#como {
+    #como {
       display: grid;
       grid-template-columns: 5fr 3fr 2fr;
       grid-template-rows: 1fr 5fr 1fr;
       color: #003865;
     }
 
-      section#como .texto {
+      #como .texto {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -395,14 +435,14 @@
         padding: 10%;
       }
 
-      section#como .dibujos {
+      #como .dibujos {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
       }
 
-      section#como .slider {
+      #como .slider {
         grid-column-start: 3;
         grid-column-end: 4;
         grid-row-start: 2;
@@ -411,14 +451,14 @@
         font-size: 14px;
       }
 
-        section#como .slider .raya {
+        #como .slider .raya {
           height: 70vh;
           border-left: 2px solid #F1B434;
           position: relative;
           left: 40%;
         }
 
-          section#como .slider .raya .circulo{
+          #como .slider .raya .circulo{
             height: 12px;
             width: 12px;
             border-radius: 50%;
@@ -428,14 +468,14 @@
           }
 
 
-    section#descripcion{
+    #descripcion{
       display: grid;
       grid-template-columns: 1fr 2fr 2fr 1fr;
       grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
       color: white;
     }
 
-      section#descripcion .arriba-izquierda {
+      #descripcion .arriba-izquierda {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -445,11 +485,11 @@
         padding: 4% 8%;
         text-align: left;
       }
-        section#descripcion .arriba-izquierda h3 {
+        #descripcion .arriba-izquierda h3 {
           font-family: 'Clan OT Bold'
         }
 
-      section#descripcion .centro {
+      #descripcion .centro {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 3;
@@ -460,7 +500,7 @@
         top: 20px;
       }
 
-        section#descripcion .centro .descripcion-paginator div{
+        #descripcion .centro .descripcion-paginator div{
           width: 30px;
           height: 30px;
           line-height: 30px;
@@ -469,22 +509,22 @@
           margin: 0px 10px;
         }
 
-        section#descripcion .centro .swiper-slide{
+        #descripcion .centro .swiper-slide{
           flex-direction: column;
         }
 
-          section#descripcion .centro .swiper-slide h4,
-          section#descripcion .centro .swiper-slide p {
+          #descripcion .centro .swiper-slide h4,
+          #descripcion .centro .swiper-slide p {
             padding: 0 10%;
           }
 
-    section#compara{
+    #compara{
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 1fr 3fr 1fr;
     }
 
-      section#compara .imagen {
+      #compara .imagen {
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 1;
@@ -493,14 +533,14 @@
         text-align: center;
       }
 
-        section#compara .imagen img {
+        #compara .imagen img {
             height: 70%;
             min-width:70%;
             max-width:none;
             margin: 10% -100%;
         }
 
-      section#compara .texto {
+      #compara .texto {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -508,12 +548,12 @@
         color: #003865;
         text-align: left;
       }
-        section#compara .texto div {
+        #compara .texto div {
           grid-row-start: 4;
           grid-row-end: 5;
           font-weight: bolder;
         }
-          section#compara .texto div .flechita {
+          #compara .texto div .flechita {
           width: 0px;
           height: 0px;
           border-top: 10px solid transparent;
@@ -522,7 +562,7 @@
           display: inline-block;
         }
 
-          section#compara .compara button{
+          #compara .compara button{
           border: 3px solid #F1B434;
           background-color: transparent;
           color: #F1B434;
@@ -531,13 +571,13 @@
           font-weight: bolder;
         }
 
-    section#empieza{
+    #empieza{
       display: grid;
       grid-template-columns: 1fr 2fr 2fr 1fr;
       grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
     }
 
-      section#empieza  .arriba-izquierda {
+      #empieza  .arriba-izquierda {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -547,11 +587,11 @@
         padding: 4% 8%;
         text-align: left;
       }
-        section#empieza .arriba-izquierda h3 {
+        #empieza .arriba-izquierda h3 {
           font-family: 'Clan OT Bold'
         }
 
-      section#empieza .centro {
+      #empieza .centro {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 3;
@@ -563,7 +603,7 @@
         grid-template-columns: 2fr 3fr;
       }
 
-        section#empieza .centro .left {
+        #empieza .centro .left {
           grid-column-start: 1;
           grid-column-end: 2;
           display: grid;
@@ -572,14 +612,14 @@
           position: relative;
         }
 
-        section#empieza .centro .right {
+        #empieza .centro .right {
           grid-column-start: 2;
           grid-column-end: 3;
           color: white;
           padding: 10%;
         }
 
-        section#empieza .centro .left .instruccion{
+        #empieza .centro .left .instruccion{
           grid-column-start: 2;
           grid-column-end: 3;
           grid-row-start: 1;
@@ -588,14 +628,14 @@
           position: relative;
           font-size: 10px;
         }
-        section#empieza .centro .left .instruccion div{
+        #empieza .centro .left .instruccion div{
           width: 50%;
           position: absolute;
           right: 0;
           bottom: 0;
         }
 
-        section#empieza .centro .left .circulo-precios{
+        #empieza .centro .left .circulo-precios{
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 2;
@@ -603,7 +643,7 @@
           position: relative;
         }
 
-          section#empieza .centro .left .circulo-precios .circulo {
+          #empieza .centro .left .circulo-precios .circulo {
             width: 200px;
             height: 200px;
             border: 20px solid #eee;
@@ -616,7 +656,7 @@
             position: absolute;
             right: 0;
           }
-          section#empieza .centro .left .circulo-precios .circulo .texto {
+          #empieza .centro .left .circulo-precios .circulo .texto {
             grid-column-start: 2;
             grid-column-end: 3;
             grid-row-start: 2;
@@ -625,12 +665,12 @@
             font-size: 14px;
           }
 
-          section#empieza .centro .right .paquete {
+          #empieza .centro .right .paquete {
             font-weight: bolder;
             margin-bottom: 20px;
           }
 
-          section#empieza .centro .right .paquete .flechita {
+          #empieza .centro .right .paquete .flechita {
             width: 0px;
             height: 0px;
             border-top: 10px solid transparent;
@@ -639,7 +679,7 @@
             display: inline-block;
           }
 
-          section#empieza .centro .right .cotiza button{
+          #empieza .centro .right .cotiza button{
             border: 3px solid #F1B434;
             background-color: transparent;
             color: #F1B434;
@@ -648,13 +688,13 @@
             font-weight: bolder;
           }
 
-    section#contacto{
+    #contacto{
       display: grid;
       grid-template-columns: 10% 1fr 10%;
       grid-template-rows: 5% 1fr 5%;
     }
 
-      section#contacto .texto {
+      #contacto .texto {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -665,43 +705,43 @@
         color: rgba(0,56,101,1);
       }
 
-        section#contacto .texto h3 {
+        #contacto .texto h3 {
           color: #F1B434;
         }
 
-        section#contacto .texto .flexibilidad {
+        #contacto .texto .flexibilidad {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 1;
           grid-row-end: 2;
         }
 
-        section#contacto .texto .llama {
+        #contacto .texto .llama {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 2;
           grid-row-end: 3;
         }
 
-        section#contacto .texto .contacto {
+        #contacto .texto .contacto {
 
         }
 
-        section#contacto .texto .direccion1 {
+        #contacto .texto .direccion1 {
           grid-column-start: 1;
           grid-column-end: 2;
           grid-row-start: 3;
           grid-row-end: 4;
         }
 
-        section#contacto .texto .direccion2 {
+        #contacto .texto .direccion2 {
           grid-column-start: 2;
           grid-column-end: 3;
           grid-row-start: 3;
           grid-row-end: 4;
         }
 
-        section#contacto .texto .redes {
+        #contacto .texto .redes {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 4;
@@ -713,60 +753,59 @@
 </head>
 <body>
     <!-- Swiper -->
+    <div id="logo"><img src="IMG/PNG/Marsam Logo Icon.png" alt=""></div>
     <div class="swiper-container" id="pager">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <section id="home">
-            <div class="imagen">
-              <img src="IMG/JPG/Hero.jpg" alt="">
+        <div class="swiper-slide" id="home">
+          <div class="imagen">
+            <img src="IMG/JPG/Hero.jpg" alt="">
+          </div>
+          <div class="centro">
+            <h2>Transforma tu energía,</h2>
+            <h3>transforma tu vida.</h3>
+            <p>Imagina una fuente inagotable de energía limpia en tu hogar. Imagina ahorro, estabilidad y tranquilidad para tu familia. <br> Marsam Solar te ayuda a generar tu propia energía y te ofrece hasta un 98% de ahorro en tu recibo de luz durante los próximos 25 años.</p>
+          </div>
+          <div class="scroll">
+            <div class="icono">
+              <div class="punto"></div>
             </div>
-            <div class="centro">
-              <h2>Transforma tu energía,</h2>
-              <h3>Transforma tu vida</h3>
-              <p>Imagina una fuente inagotable de energía limpia en tu hogar. Imagina ahorro, estabilidad y tranquilidad para tu familia. <br> Marsam Solar te ayuda a generar tu propia energía y te ofrece hasta un 98% de ahorro en tu recibo de luz durante los próximos 25 años.</p>
-              <div>
-                <div class="icono">
-                  <div class="punto"></div>
-                </div>
-                <div class="scroll">SCROLL</div>
-              </div>
-            </div>
-            <div id="logo"><img src="IMG/PNG/Marsam Logo Icon.png" alt=""></div>
-          </section>
+            <div class="texto">SCROLL</div>
+          </div>
+          <div class="rayita">
+            <div class="puntito">&nbsp;</div>
+          </div>
         </div>
-        <div class="swiper-slide">
-          <section id="cotiza">
+        <div class="swiper-slide" id="circulo">
             <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207472/preview -->
-            <div class="imagen">
+            <!-- <div class="imagen">
               <img src="IMG/PNG/Mexico.png" alt="">
-            </div>
-            <div class="left">
-              <div class="pregunta"><span>¿Cuánto gastas de luz?</span></div>
-              <div class="instruccion"><div>ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div></div>
-              <div class="circulo-precios">
-                <div class="circulo">
-                  <div class="texto">
-                    <h4>$0-$800/bimensual</h4>
-                    Sigue así. <br> Juntos podemos seguir ayudando al medio ambiente
-                  </div>
-                </div>
+            </div> -->
+          <div class="pregunta"><span>¿Cuánto pagas de luz?</span></div>
+          <div class="instruccion"><div>ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div></div>
+          <div class="circulo-precios">
+            <div class="circulo">
+              <div class="texto">
+                <h4>$0-$800<br>bimestral</h4>
+                Sigue así. <br> Juntos podemos seguir ayudando al medio ambiente
               </div>
             </div>
-            <div class="right">
+          </div>
+        </div>
+        <div class="swiper-slide" id="cotiza">
+            <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207472/preview -->
+            <div class="texto">
               <h2 class="frase">Dinos cuánto gastas y te decimos cuánto puedes ahorrar con Marsam Solar.</h2>
               <p class="parrafo">Conoce los beneficios de tener paneles solares en México.</p>
               <div class="paquete"><div class="flechita"></div>$0-$800/bimensual</div>
               <div class="cotiza"><button>COTIZA SIN COSTO</button></div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="pasos">
-            <div class="arriba-izquierda">
-              <h3>Un cambio increíblemente fácil.</h3>
-              <p>Marsam Solar celebra tu cambio a energía solar con un proceso es claro, cómodo y amigable.</p>
-            </div>
-            <div class="centro">
+        <div class="swiper-slide" id="pasos">
+          <div class="arriba-izquierda">
+            <h3>Un cambio increíblemente fácil.</h3>
+            <p>Marsam Solar celebra tu cambio a energía solar con un proceso es claro, cómodo y amigable.</p>
+          </div>
+          <div class="centro">
               <div class="swiper-container" id="pasos-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -796,29 +835,25 @@
                 <div class="swiper-button-prev swiper-button-white" id="pasos-prev"></div>
               </div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="como">
-            <div class="texto">
-              <h2>¿Cómo funciona?</h2>
-              <h4>Descubre cómo funciona un sistema fotovoltaico con la mejor empresa de energía solar en México.</h4>
-              <p>Un sistema Marsam Solar está diseñado para producir exactamente lo que necesitas de energía para que la luz de tu casa funcione como de costumbre sin importar la hora del día o la estación el año.</p>
-            </div>
-            <div class="dibujos"></div>
-            <div class="slider">
+        <div class="swiper-slide" id="como">
+          <div class="texto">
+            <h2>¿Cómo funciona?</h2>
+            <h4>Descubre cómo funciona un sistema fotovoltaico con la mejor empresa de energía solar en México.</h4>
+            <p>Un sistema Marsam Solar está diseñado para producir exactamente lo que necesitas de energía para que la luz de tu casa funcione como de costumbre sin importar la hora del día o la estación el año.</p>
+          </div>
+          <div class="dibujos"></div>
+          <div class="slider">
               <div class="texto">ARRASTRA Y DESCUBRE CÓMO FUNCIONA TU SISTEMA MARSAM.</div>
               <div class="raya"><div class="circulo"></div></div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="descripcion">
-            <div class="arriba-izquierda">
-              <h3>Poderoso. Simple. Confiable.</h3>
-              <p>Así es Marsam Solar. Hacemos lo que otros dicen que no pueden hacer.</p>
-            </div>
-            <div class="centro">
+        <div class="swiper-slide" id="descripcion">
+          <div class="arriba-izquierda">
+            <h3>Poderoso. Simple. Confiable.</h3>
+            <p>Así es Marsam Solar. Hacemos lo que otros dicen que no pueden hacer.</p>
+          </div>
+          <div class="centro">
               <div class="descripcion-paginator">
                 <div onclick="swiperDescripcion.slideTo(0)">1</div>
                 <div onclick="swiperDescripcion.slideTo(1)">2</div>
@@ -848,14 +883,12 @@
                 <div class="swiper-button-prev swiper-button-white" id="descripcion-prev"></div>
               </div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="compara">
-            <div class="imagen">
-              <img src="IMG/PNG/Panel.png" alt="">
-            </div>
-            <div class="texto">
+        <div class="swiper-slide" id="compara">
+          <div class="imagen">
+            <img src="IMG/PNG/Panel.png" alt="">
+          </div>
+          <div class="texto">
               <h2>Propuesta honesta, valor incomparable.</h2>
               <h4>Te vamos a revelar un secreto. Algo que nadie más te va a decir.</h4>
               <p>Muchos podrán decir que van a bajar tu recibo de luz, pero pocos podemos asegurar el desempeño óptimo de tu sistema de paneles solares por 25 años. La gran diferencia está en los detalles: desde el diseño adecuado con componentes de calidad y una instalación de primera hasta el monitoreo integral al alcance de tus manos.
@@ -865,15 +898,13 @@
               <div><div class="flechita"></div>Todo lo que necesitas saber para tomar una decisión inteligente.</div>
               <div class="compara"><button>COMPARA</button></div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="empieza">
-            <div class="arriba-izquierda">
-              <h3>El cambio está en tus manos.</h3>
-              <p>Todo es posible con Marsam Solar, la mejor empresa de paneles solares en México.</p>
-            </div>
-            <div class="centro">
+        <div class="swiper-slide" id="empieza">
+          <div class="arriba-izquierda">
+            <h3>El cambio está en tus manos.</h3>
+            <p>Todo es posible con Marsam Solar, la mejor empresa de paneles solares en México.</p>
+          </div>
+          <div class="centro">
               <div class="left">
                 <div class="instruccion"><div>ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div></div>
                 <div class="circulo-precios">
@@ -891,11 +922,9 @@
                 <div class="cotiza"><button>COTIZA SIN COSTO</button></div>
               </div>
             </div>
-          </section>
         </div>
-        <div class="swiper-slide">
-          <section id="contacto">
-            <div class="texto">
+        <div class="swiper-slide" id="contacto">
+          <div class="texto">
               <div class="flexibilidad">
                 <h3>Nuestra flexibilidad no tiene límites.</h3>
                 <h4>Apertura y adaptabilidad a todo tipo de proyectos</h4>
@@ -923,11 +952,10 @@
                 <span>T</span>
               </div>
             </div>
-          </section>
         </div>
       </div>
       <!-- Add Pagination -->
-      <div class="swiper-pagination" id="pager-pagination"></div>
+      <div class="swiper-scrollbar" id="pager-scrollbar"></div>
     </div>
 
     <!-- Swiper JS -->
@@ -936,13 +964,14 @@
     <!-- Initialize Swiper -->
     <script>
     var swiper = new Swiper('#pager', {
-        pagination: '#pager-pagination',
+        // pagination: '#pager-pagination',
+        scrollbar: '#pager-scrollbar',
         direction: 'horizontal',
-        slidesPerView: 1,
         paginationClickable: true,
         slidesPerView: 'auto',
         keyboardControl: true,
-        mousewheelControl: true
+        mousewheelControl: true,
+        freeMode: true
     });
     var swiperPasos = new Swiper('#pasos-swiper', {
         pagination: '#pasos-pagination',
