@@ -1,0 +1,85 @@
+#circulo {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 50vw;
+}
+  #circulo .parallax-mexico{
+    position: absolute;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+    width: 65vw;
+    height: 80%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    top: 10%;
+    left: 50%;
+  }
+
+  #circulo .pregunta{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-bottom: 2px solid #F1B434;
+    color: #F1B434;
+    position: relative;
+    font-size: 14px;
+  }
+
+    #circulo .pregunta span{
+      position: absolute;
+      bottom: 7px;
+      right: 15px;
+      font-family: "Clan OT Medium";
+      font-size: 16px;
+    }
+
+  #circulo .circulo-precios{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+  }
+
+    #circulo .circulo-precios .circulo {
+      width: 300px;
+      height: 300px;
+      border: 30px solid grey;
+      border-radius: 50%;
+      display: grid;
+      grid-template-columns: 1fr 6fr 1fr;
+      grid-template-rows: : 1fr 6fr 1fr;
+      border-left-color: #F1B434;
+      text-align: center;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
+      #circulo .circulo-precios .circulo .instruccion{
+        color: #8E9AAF;
+        position: absolute;
+        font-size: 11px;
+        font-family: "Clan OT Medium";
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        line-height: 16px;
+        left: 150px;
+        bottom: 5px;
+        height: auto;
+        top: -75px;
+        text-align: left;
+      }
+
+      #circulo .circulo-precios .circulo .texto {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        color: #003865;
+        font-family: "Clan OT Medium";
+        font-size: 18px;
+      }
+
+    #circulo .circulo-precios .circulo h4{
+      color: #003865;
+      font-size: 18px;
+      line-height: 22px;
+    }

@@ -8,767 +8,113 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="circulo.css">
+    <link rel="stylesheet" href="cotiza.css">
+    <link rel="stylesheet" href="pasos.css">
+    <link rel="stylesheet" href="como.css">
+    <link rel="stylesheet" href="sistema.css">
+    <link rel="stylesheet" href="descripcion.css">
+    <link rel="stylesheet" href="compara.css">
+    <link rel="stylesheet" href="empieza.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="pagina-cotiza.css">
 
-    <!-- Demo styles -->
-    <style>
-
-    @font-face {
-      font-family: "Clan OT Thin";
-      src: url('Clan-OT-Thin.ttf') format("truetype");
-    }
-
-    @font-face {
-      font-family: "Clan OT Bold";
-      src: url('Clan-OT-Bold.ttf') format("truetype");
-    }
-
-    @font-face {
-      src: url('Clan-OT-Regular.ttf') format("truetype");
-      font-family: "Clan OT Regular";
-    }
-
-    @font-face {
-      src: url('Clan-OT-Medium.ttf') format("truetype");
-      font-family: "Clan OT Medium";
-    }
-
-
-    html, body {
-        font-family: "Clan OT Regular", Verdana, Tahoma;
-        position: relative;
-        height: 100%;
-
-    }
-    body {
-        font-size: 18px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-
-    .swiper-scrollbar-drag {
-      background-color: #F1B434;
-      height: 10px;
-      border-radius: 0%;
-    }
-
-    #pager .swiper-pagination-bullet-active {
-      background: #F1B434;
-    }
-    #pasos-swiper .swiper-pagination-bullet-active {
-      background: white;
-    }
-
-    body #logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      background-color: #003865;
-      z-index: 10;
-      text-align: center;
-    }
-
-      body #logo img {
-        width: 40px;
-        margin: auto;
-        position: relative;
-        top: 10px;
-      }
-
-    .swiper-slide div {
-      width: 100%;
-      height: 100%;
-    }
-
-    h1, h2, h3, h4 {
-      margin-top: 0px;
-    }
-
-    p {
-      line-height: 26px;
-      margin-top: 20px;
-    }
-
-    #home {
-      display: grid;
-      grid-template-columns: 2fr 2fr 1fr 1fr;
-      grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-      color: white;
-    }
-
-      #home .centro {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        z-index: 2;
-        text-align: left;
-        position: relative;
-      }
-
-        #home .centro h2 {
-          font-family: "Clan OT Medium";
-          line-height: 35px;
-          font-size: 38px;
-          margin-bottom: 20px;
-          margin-top: 0px;
-        }
-        #home .centro h3 {
-          font-family: 'Clan OT Thin';
-          font-size: 38px;
-          margin: 20px 0;
-        }
-
-        #home .centro p {
-          font-weight: normal;
-          line-height: 26px;
-        }
-
-        #home .centro > div {
-          position: absolute;
-          bottom: 0;
-          left: 45%;
-          margin-bottom: 10px;
-          text-align: center;
-        }
-
-      #home .scroll {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 6;
-        z-index: 2;
-        position: relative;
-      }
-
-      #home .scroll .texto {
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 10px;
-      }
-
-      #home .scroll .icono {
-        height: 50px;
-        width: 25px;
-        border: 2px solid #F1B434;
-        border-radius: 35%;
-        margin: 0 auto;
-      }
-
-        #home .centro > div > .icono .punto{
-          background-color: #F1B434;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          position: absolute;
-          top: 10px;
-          left: 10px;
-        }
-
-      #home .imagen {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 6;
-        overflow:hidden;
-        text-align: center;
-      }
-
-        #home .imagen img {
-            height: 100%;
-            min-width:100%;
-            max-width:none;
-            margin:0 -100%;
-        }
-
-      #home .rayita {
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        border-bottom: 2px solid #F1B434;
-        position: relative;
-      }
-
-        #home .rayita .puntito {
-          height: 7px;
-          width: 7px;
-          border-radius: 50%;
-          position: absolute;
-          background-color: #F1B434;
-          left: 0; top: 99.5%;
-        }
-
-      /*#cotiza .imagen {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 6;
-        overflow:hidden;
-        text-align: center;
-      }
-
-      #cotiza .imagen img {
-          height: 70%;
-          min-width:70%;
-          max-width:none;
-          margin: 10% -100%;
-      }*/
-
-    #circulo {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows:1fr 1fr 1fr 1fr;
-      width: 50vw;
-    }
-
-      #circulo .pregunta{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        border-bottom: 2px solid #F1B434;
-        color: #F1B434;
-        position: relative;
-        font-size: 14px;
-      }
-
-        #circulo .pregunta span{
-          position: absolute;
-          bottom: 7px;
-          left: 15px;
-          font-family: "Clan OT Medium";
-          font-size: 16px;
-        }
-
-      #circulo .instruccion{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        color: #8E9AAF;
-        position: relative;
-        font-size: 10px;
-      }
-      #circulo .instruccion div{
-        width: 50%;
-        position: absolute;
-        left: 0;
-        bottom: -80%;
-      }
-
-      #circulo .circulo-precios{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 4;
-      }
-
-        #circulo .circulo-precios .circulo {
-          width: 300px;
-          height: 300px;
-          border: 30px solid grey;
-          border-radius: 50%;
-          display: grid;
-          grid-template-columns: 1fr 6fr 1fr;
-          grid-template-rows: : 1fr 6fr 1fr;
-          border-left-color: #F1B434;
-          text-align: center;
-          /* TODO arreglar que sea grid*/
-        }
-        #circulo .circulo-precios .circulo .texto {
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 2;
-          grid-row-end: 3;
-          color: #003865;
-        }
-
-        #circulo .circulo-precios .circulo h4{
-          color: #003865;
-          font-size: 18px;
-          line-height: 22px;
-        }
-
-    #cotiza {
-        display: grid;
-        grid-template-columns: 3fr 1fr:
-        color: #003865;
-        padding: 0 30px;
-        text-align: left;
-        width: 50vw;
-      }
-
-        #cotiza #texto h2.frase {
-        }
-        #cotiza #texto p.parrafo {
-        }
-        #cotiza #texto .paquete {
-        }
-        #cotiza #texto .paquete .flechita {
-          width: 0px;
-          height: 0px;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 10px solid  #F1B434;
-          display: inline-block;
-        }
-        #cotiza #texto .cotiza {
-        }
-
-        #cotiza #texto .cotiza button{
-          border: 3px solid #F1B434;
-          background-color: transparent;
-          color: #F1B434;
-          text-align: center;
-          padding: 20px;
-          font-weight: bolder;
-        }
-
-    #pasos{
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
-    }
-
-      #pasos .arriba-izquierda {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        background-color: rgba(142,154,175,1);
-        color: white;
-        padding: 4% 8%;
-        text-align: left;
-      }
-        #pasos .arriba-izquierda h3 {
-          font-family: 'Clan OT Bold'
-        }
-      #pasos .centro {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        background-color: rgba(249,56,34,1);
-        position: relative;
-        top: 20px;
-      }
-
-      #pasos #pasos-swiper .swiper-slide {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-        #pasos #pasos-swiper .swiper-slide .left {
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-
-        #pasos #pasos-swiper .swiper-slide .right {
-          grid-column-start: 2;
-          grid-column-end: 3;
-        }
-
-        #pasos #pasos-swiper .swiper-slide .texto {
-          display: grid;
-          grid-template-columns: 1fr 3fr;
-          padding: 0 50px;
-          color: white;
-        }
-
-        #pasos #pasos-swiper .swiper-slide .numero {
-          display: inline-block;
-          border: 2px solid white;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          margin: auto;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-
-        #pasos #pasos-swiper .swiper-slide .paso {
-          display: inline-block;
-          grid-column-start: 2;
-          grid-column-end: 3;
-        }
-
-    #como {
-      display: grid;
-      grid-template-columns: 5fr 3fr 2fr;
-      grid-template-rows: 1fr 5fr 1fr;
-      color: #003865;
-    }
-
-      #como .texto {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        text-align: left;
-        padding: 10%;
-      }
-
-      #como .dibujos {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-
-      #como .slider {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        color:#8E9AAF;
-        font-size: 14px;
-      }
-
-        #como .slider .raya {
-          height: 70vh;
-          border-left: 2px solid #F1B434;
-          position: relative;
-          left: 40%;
-        }
-
-          #como .slider .raya .circulo{
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            background-color: #F1B434;
-            position: relative;
-            left:-6px;
-          }
-
-
-    #descripcion{
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
-      color: white;
-    }
-
-      #descripcion .arriba-izquierda {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        background-color: rgba(142,154,175,1);
-        color: white;
-        padding: 4% 8%;
-        text-align: left;
-      }
-        #descripcion .arriba-izquierda h3 {
-          font-family: 'Clan OT Bold'
-        }
-
-      #descripcion .centro {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        background-color: rgba(249,56,34,1);
-        padding: 10%;
-        position: relative;
-        top: 20px;
-      }
-
-        #descripcion .centro .descripcion-paginator div{
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          border: 2px solid white;
-          display: inline-block;
-          margin: 0px 10px;
-        }
-
-        #descripcion .centro .swiper-slide{
-          flex-direction: column;
-        }
-
-          #descripcion .centro .swiper-slide h4,
-          #descripcion .centro .swiper-slide p {
-            padding: 0 10%;
-          }
-
-    #compara{
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: 1fr 3fr 1fr;
-    }
-
-      #compara .imagen {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 6;
-        overflow:hidden;
-        text-align: center;
-      }
-
-        #compara .imagen img {
-            height: 70%;
-            min-width:70%;
-            max-width:none;
-            margin: 10% -100%;
-        }
-
-      #compara .texto {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        color: #003865;
-        text-align: left;
-      }
-        #compara .texto div {
-          grid-row-start: 4;
-          grid-row-end: 5;
-          font-weight: bolder;
-        }
-          #compara .texto div .flechita {
-          width: 0px;
-          height: 0px;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 10px solid  #F1B434;
-          display: inline-block;
-        }
-
-          #compara .compara button{
-          border: 3px solid #F1B434;
-          background-color: transparent;
-          color: #F1B434;
-          text-align: center;
-          padding: 20px;
-          font-weight: bolder;
-        }
-
-    #empieza{
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr 4fr 2fr;
-    }
-
-      #empieza  .arriba-izquierda {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        background-color: rgba(241,180,52,1);
-        color: white;
-        padding: 4% 8%;
-        text-align: left;
-      }
-        #empieza .arriba-izquierda h3 {
-          font-family: 'Clan OT Bold'
-        }
-
-      #empieza .centro {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        background-color: rgba(0,56,101,1);
-        position: relative;
-        top: 20px;
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-      }
-
-        #empieza .centro .left {
-          grid-column-start: 1;
-          grid-column-end: 2;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 5fr;
-          position: relative;
-        }
-
-        #empieza .centro .right {
-          grid-column-start: 2;
-          grid-column-end: 3;
-          color: white;
-          padding: 10%;
-        }
-
-        #empieza .centro .left .instruccion{
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 2;
-          color: #8E9AAF;
-          position: relative;
-          font-size: 10px;
-        }
-        #empieza .centro .left .instruccion div{
-          width: 50%;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-        }
-
-        #empieza .centro .left .circulo-precios{
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 2;
-          grid-row-end: 3;
-          position: relative;
-        }
-
-          #empieza .centro .left .circulo-precios .circulo {
-            width: 200px;
-            height: 200px;
-            border: 20px solid #eee;
-            border-radius: 50%;
-            display: grid;
-            grid-template-columns: 1fr 6fr 1fr;
-            grid-template-rows: : 1fr 6fr 1fr;
-            border-left-color: #F1B434;
-            text-align: center;
-            position: absolute;
-            right: 0;
-          }
-          #empieza .centro .left .circulo-precios .circulo .texto {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            color: white;
-            font-size: 14px;
-          }
-
-          #empieza .centro .right .paquete {
-            font-weight: bolder;
-            margin-bottom: 20px;
-          }
-
-          #empieza .centro .right .paquete .flechita {
-            width: 0px;
-            height: 0px;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid  #F1B434;
-            display: inline-block;
-          }
-
-          #empieza .centro .right .cotiza button{
-            border: 3px solid #F1B434;
-            background-color: transparent;
-            color: #F1B434;
-            text-align: center;
-            padding: 20px;
-            font-weight: bolder;
-          }
-
-    #contacto{
-      display: grid;
-      grid-template-columns: 10% 1fr 10%;
-      grid-template-rows: 5% 1fr 5%;
-    }
-
-      #contacto .texto {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 3fr 2fr 2fr 1fr;
-        color: rgba(0,56,101,1);
-      }
-
-        #contacto .texto h3 {
-          color: #F1B434;
-        }
-
-        #contacto .texto .flexibilidad {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 2;
-        }
-
-        #contacto .texto .llama {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 2;
-          grid-row-end: 3;
-        }
-
-        #contacto .texto .contacto {
-
-        }
-
-        #contacto .texto .direccion1 {
-          grid-column-start: 1;
-          grid-column-end: 2;
-          grid-row-start: 3;
-          grid-row-end: 4;
-        }
-
-        #contacto .texto .direccion2 {
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 3;
-          grid-row-end: 4;
-        }
-
-        #contacto .texto .redes {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 4;
-          grid-row-end: 5;
-        }
-
-
-    </style>
 </head>
 <body>
+    <div id="menu">
+      <div class="close-button" onclick="closeMenu()"></div>
+      <div class="centro">
+        <a href=""><h1>INICIO</h1></a>
+        <a href="">
+          <h1>COMPARADOR</h1>
+          <p>Compara Cotizaciones</p>
+        </a>
+        <a href="">
+          <h1>SOLUCIONES</h1>
+          <p>Comerciales, Industriales, Agrícolas</p>
+        </a>
+        <a href="">
+          <h1>FAQ</h1>
+          <p>Preguntas Frecuentes</p>
+        </a>
+      </div>
+    </div>
+    <div id="pagina-cotiza">
+      <div class="close-button" onclick="closePaginaCotiza()"></div>
+      <div class="titulo">
+        <div class="centro">
+          <h2>Cambia de energía y empieza a ahorrar.</h2>
+          <p>Solicita una consulta aquí o llama al (55) 5272 16 33. </p>
+        </div>
+      </div>
+      <div class="datos">
+        <div class="num1">
+          <div class="numero">1</div>
+          <span class="label">Tu consumo bimestral:</span>
+          <input type="text" placeholder="$800-$2500">
+        </div>
+        <div class="num2">
+          <div class="numero">2</div>
+          <span class="label">Tu cúmero de servicio CFE:</span>
+          <input type="text" placeholder="opcional">
+        </div>
+        <div class="num3">
+          <div class="numero">3</div>
+          <span class="label">Tu código postal:</span>
+          <input type="text" placeholder="requerido">
+        </div>
+        <div class="num4">
+          <div class="numero">4</div>
+          <span class="label">Tu nombre y apellido:</span>
+          <input type="text" placeholder="requerido">
+        </div>
+        <div class="num5">
+          <div class="numero">5</div>
+          <span class="label">Tu mejor correo:</span>
+          <input type="text" placeholder="requerido">
+        </div>
+        <div class="num6">
+          <div class="numero">6</div>
+          <span class="label">Tu mejor teléfono:</span>
+          <input type="text" placeholder="requerido">
+        </div>
+      </div>
+      <div class="imagenes">
+        <img src="IMG/PNG/Paso1.png" alt="">
+        <img src="IMG/PNG/Paso1.png" alt="">
+        <img src="IMG/PNG/Paso1.png" alt="">
+        <img src="IMG/PNG/Paso1.png" alt="">
+      </div>
+      <div class="boton"><button class="animated-button thar-three">SOLICITAR CONSULTA</button></div>
+    </div>
+
     <!-- Swiper -->
-    <div id="logo"><img src="IMG/PNG/Marsam Logo Icon.png" alt=""></div>
+    <div id="logo" onclick="openMenu()">
+      <img src="IMG/PNG/Marsam Logo Icon.png" alt="">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="swiper-container" id="pager">
+      <div class="parallax-bg parallax-bg-2" style="background-image:url(http://lorempixel.com/900/600/nightlife/5/)" data-swiper-parallax="-10%"></div>
       <div class="swiper-wrapper">
         <div class="swiper-slide" id="home">
           <div class="imagen">
             <img src="IMG/JPG/Hero.jpg" alt="">
           </div>
-          <div class="centro">
+          <div class="centro" data-swiper-parallax="5%">
             <h2>Transforma tu energía,</h2>
             <h3>transforma tu vida.</h3>
             <p>Imagina una fuente inagotable de energía limpia en tu hogar. Imagina ahorro, estabilidad y tranquilidad para tu familia. <br> Marsam Solar te ayuda a generar tu propia energía y te ofrece hasta un 98% de ahorro en tu recibo de luz durante los próximos 25 años.</p>
           </div>
           <div class="scroll">
-            <div class="icono">
-              <div class="punto"></div>
-            </div>
+            <button class="scroll__down">
+          		<span class="scroll__mouse">
+          			<span class="scroll__wheel"></span>
+          		</span>
+            </button>
             <div class="texto">SCROLL</div>
           </div>
           <div class="rayita">
@@ -780,10 +126,11 @@
             <!-- <div class="imagen">
               <img src="IMG/PNG/Mexico.png" alt="">
             </div> -->
+          <div class="parallax-bg parallax-mexico" style="background-image:url(IMG/PNG/Mexico.png)" data-swiper-parallax="-20%"></div>
           <div class="pregunta"><span>¿Cuánto pagas de luz?</span></div>
-          <div class="instruccion"><div>ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div></div>
           <div class="circulo-precios">
             <div class="circulo">
+              <div class="instruccion">ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div>
               <div class="texto">
                 <h4>$0-$800<br>bimestral</h4>
                 Sigue así. <br> Juntos podemos seguir ayudando al medio ambiente
@@ -793,39 +140,42 @@
         </div>
         <div class="swiper-slide" id="cotiza">
             <!-- mockup https://projects.invisionapp.com/d/main#/console/11431340/243207472/preview -->
-            <div class="texto">
-              <h2 class="frase">Dinos cuánto gastas y te decimos cuánto puedes ahorrar con Marsam Solar.</h2>
-              <p class="parrafo">Conoce los beneficios de tener paneles solares en México.</p>
-              <div class="paquete"><div class="flechita"></div>$0-$800/bimensual</div>
-              <div class="cotiza"><button>COTIZA SIN COSTO</button></div>
-            </div>
+          <div class="texto">
+            <h2 class="frase">Dinos cuánto gastas y te decimos cuánto puedes ahorrar con Marsam Solar.</h2>
+            <p class="parrafo">Conoce los beneficios de tener paneles solares en México.</p>
+            <div class="paquete"><div class="flechita"></div><span>$0-$800/bimensual</span></div>
+            <div class="cotiza"><button class="animated-button thar-three" onclick="abrePaginaCotiza()">COTIZA SIN COSTO</button></div>
+          </div>
         </div>
         <div class="swiper-slide" id="pasos">
+          <div class="img-izquierda" data-swiper-parallax="-30%"><img src="https://lorempixel.com/500/800/business/4" alt=""></div>
           <div class="arriba-izquierda">
-            <h3>Un cambio increíblemente fácil.</h3>
-            <p>Marsam Solar celebra tu cambio a energía solar con un proceso es claro, cómodo y amigable.</p>
+            <div>
+              <h3>Un cambio increíblemente fácil.</h3>
+              <p>Marsam Solar celebra tu cambio a energía solar con un proceso es claro, cómodo y amigable.</p>
+            </div>
           </div>
-          <div class="centro">
+          <div class="centro" data-swiper-parallax="-30%">
               <div class="swiper-container" id="pasos-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="left">asd</div>
+                    <div class="left"><img src="IMG/PNG/Paso1.png" alt=""></div>
                     <div class="right texto">
-                      <div class="numero">1</div>
+                      <div class="numero"><div class="circulo">1</div></div>
                       <div class="paso">Dinos tu consumo de luz actual.</div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="left texto">
-                      <div class="numero">2</div>
+                      <div class="numero"><div class="circulo">2</div></div>
                       <div class="paso">Recibe una cotización personalizada y elige hacer una inversión inteligente con Marsam Solar.</div>
                     </div>
-                    <div class="right">asd</div>
+                    <div class="right"><img src="IMG/PNG/Paso1.png" alt=""></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="left">asd</div>
+                    <div class="left"><img src="IMG/PNG/Paso1.png" alt=""></div>
                     <div class="right texto">
-                      <div class="numero">3</div>
+                      <div class="numero"><div class="circulo">3</div></div>
                       <div class="paso">Despreocúpate. Nosotros nos encargamos del todo. Desde diseño, ingenieria e instalación de tu sistema fotovoltáico hasta trámites de interconexión con CFE.</div>
                     </div>
                   </div>
@@ -842,23 +192,36 @@
             <h4>Descubre cómo funciona un sistema fotovoltaico con la mejor empresa de energía solar en México.</h4>
             <p>Un sistema Marsam Solar está diseñado para producir exactamente lo que necesitas de energía para que la luz de tu casa funcione como de costumbre sin importar la hora del día o la estación el año.</p>
           </div>
-          <div class="dibujos"></div>
+        </div>
+        <div class="swiper-slide" id="sistema">
+          <div class="dibujos"><img src="IMG/PNG/casita.png" alt=""></div>
           <div class="slider">
               <div class="texto">ARRASTRA Y DESCUBRE CÓMO FUNCIONA TU SISTEMA MARSAM.</div>
               <div class="raya"><div class="circulo"></div></div>
             </div>
         </div>
         <div class="swiper-slide" id="descripcion">
+          <div class="img-izquierda" data-swiper-parallax="-30%"><img src="https://lorempixel.com/500/800/business/2" alt=""></div>
           <div class="arriba-izquierda">
-            <h3>Poderoso. Simple. Confiable.</h3>
-            <p>Así es Marsam Solar. Hacemos lo que otros dicen que no pueden hacer.</p>
+            <div>
+              <h3>Poderoso. Simple. Confiable.</h3>
+              <p>Así es Marsam Solar. Hacemos lo que otros dicen que no pueden hacer.</p>
+            </div>
           </div>
-          <div class="centro">
+          <div class="centro" data-swiper-parallax="-30%">
               <div class="descripcion-paginator">
-                <div onclick="swiperDescripcion.slideTo(0)">1</div>
-                <div onclick="swiperDescripcion.slideTo(1)">2</div>
-                <div onclick="swiperDescripcion.slideTo(2)">3</div>
-                <div onclick="swiperDescripcion.slideTo(3)">4</div>
+                <div onclick="onPaginatorDescripcionSelected(0)" id="personal" class="selected">
+                  <div class="flechita"></div>
+                </div>
+                <div onclick="onPaginatorDescripcionSelected(1)" id="analytics">
+                  <div class="flechita"></div>
+                </div>
+                <div onclick="onPaginatorDescripcionSelected(2)" id="on">
+                  <div class="flechita"></div>
+                </div>
+                <div onclick="onPaginatorDescripcionSelected(3)" id="ruler">
+                  <div class="flechita"></div>
+                </div>
               </div>
               <div class="swiper-container" id="descripcion-swiper">
                 <div class="swiper-wrapper">
@@ -879,36 +242,40 @@
                     <p>Cuando se trata de energía solar, sabemos que la única manera de maximizar tu ahorro es con una ingeniería a tu medida. </p>
                   </div>
                 </div>
-                <div class="swiper-button-next swiper-button-white" id="descripcion-next"></div>
-                <div class="swiper-button-prev swiper-button-white" id="descripcion-prev"></div>
               </div>
             </div>
         </div>
         <div class="swiper-slide" id="compara">
           <div class="imagen">
-            <img src="IMG/PNG/Panel.png" alt="">
+            <img src="IMG/PNG/Panel.png" alt="" data-swiper-parallax="-30%">
           </div>
           <div class="texto">
               <h2>Propuesta honesta, valor incomparable.</h2>
               <h4>Te vamos a revelar un secreto. Algo que nadie más te va a decir.</h4>
               <p>Muchos podrán decir que van a bajar tu recibo de luz, pero pocos podemos asegurar el desempeño óptimo de tu sistema de paneles solares por 25 años. La gran diferencia está en los detalles: desde el diseño adecuado con componentes de calidad y una instalación de primera hasta el monitoreo integral al alcance de tus manos.
-                Estamos tan seguros del valor de nuestra propuesta que te vamos a decir en qué te debes de fijar al leer nuestra cotización para compararla con otras propuestas.
-                ¿Una pista? La comparación no está en el precio final.
+                <br><br>Estamos tan seguros del valor de nuestra propuesta que te vamos a decir en qué te debes de fijar al leer nuestra cotización para compararla con otras propuestas.
+                <br><br>¿Una pista? La comparación no está en el precio final.
               </p>
-              <div><div class="flechita"></div>Todo lo que necesitas saber para tomar una decisión inteligente.</div>
-              <div class="compara"><button>COMPARA</button></div>
+              <div class="tip">
+                <div class="flechita"></div>
+                <span>Todo lo que necesitas saber para tomar una decisión inteligente.</span>
+              </div>
+              <div class="compara"><button class="animated-button thar-three" onclick="abrePaginaCotiza()">COMPARA</button></div>
             </div>
         </div>
         <div class="swiper-slide" id="empieza">
+          <div class="img-izquierda" data-swiper-parallax="-30%"><img src="https://lorempixel.com/500/800/business/3" alt=""></div>
           <div class="arriba-izquierda">
-            <h3>El cambio está en tus manos.</h3>
-            <p>Todo es posible con Marsam Solar, la mejor empresa de paneles solares en México.</p>
+            <div>
+              <h3>El cambio está en tus manos.</h3>
+              <p>Todo es posible con Marsam Solar, la mejor empresa de paneles solares en México.</p>
+            </div>
           </div>
-          <div class="centro">
+          <div class="centro" data-swiper-parallax="-30%">
               <div class="left">
-                <div class="instruccion"><div>ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div></div>
                 <div class="circulo-precios">
                   <div class="circulo">
+                    <div class="instruccion">ARRASTRA Y DESCUBRE CUÁNTO PUEDES AHORRAR.</div>
                     <div class="texto">
                       <h4>$0-$800/bimensual</h4>
                       Sigue así. <br> Juntos podemos seguir ayudando al medio ambiente
@@ -918,25 +285,24 @@
               </div>
               <div class="right">
                 <h2>Empieza a ahorrar hoy con Marsam Solar.</h2>
-                <div class="paquete"><div class="flechita"></div>$0-$800/bimensual</div>
-                <div class="cotiza"><button>COTIZA SIN COSTO</button></div>
+                <div class="paquete"><div class="flechita"></div><span>$0-$800/bimensual</span></div>
+                <div class="cotiza"><button class="animated-button thar-three" onclick="abrePaginaCotiza()">COTIZA SIN COSTO</button></div>
               </div>
             </div>
         </div>
         <div class="swiper-slide" id="contacto">
           <div class="texto">
-              <div class="flexibilidad">
+            <div class="caja">
+              <div class="contacto">
                 <h3>Nuestra flexibilidad no tiene límites.</h3>
                 <h4>Apertura y adaptabilidad a todo tipo de proyectos</h4>
                 <p>Nuestro alcance es muy amplio, cuéntanos de tus necesidades y te ayudamos a cumplirlas. Hemos trabajado en gimnasios, asilos, edificios, fundaciones y ranchos hípicos y también hacemos terrazas solares</p>
                 <a href="">Contáctanos</a>
-              </div>
-              <div class="llama">
                 <h3>Habla con un asesor</h3>
                 <h4>Lunes a Viernes de 9.00 a 18.00</h4>
                 <a href="">(55) 5272 16 33</a>
+                <h3>Contacto</h3>
               </div>
-              <div><h3>Contacto</h3></div>
               <div class="direccion1">
                 <h4>Ciudad de México</h4>
                 <p>General Juan Cano #27 San Miguel Chapultepec</p>
@@ -948,9 +314,10 @@
                 <a href="">mehm@marsamsolar.com</a>
               </div>
               <div class="redes">
-                <span>F</span>
-                <span>T</span>
+                <img src="IMG/PNG/Facebook.png" alt="">
+                <img src="IMG/PNG/Twitter.png" alt="">
               </div>
+            </div>
             </div>
         </div>
       </div>
@@ -962,34 +329,8 @@
     <script src="swiper.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper('#pager', {
-        // pagination: '#pager-pagination',
-        scrollbar: '#pager-scrollbar',
-        direction: 'horizontal',
-        paginationClickable: true,
-        slidesPerView: 'auto',
-        keyboardControl: true,
-        mousewheelControl: true,
-        freeMode: true
-    });
-    var swiperPasos = new Swiper('#pasos-swiper', {
-        pagination: '#pasos-pagination',
-        direction: 'horizontal',
-        slidesPerView: 1,
-        paginationClickable: true,
-        slidesPerView: 'auto',
-        nextButton: '#pasos-next',
-        prevButton: '#pasos-prev',
-    });
-    var swiperDescripcion = new Swiper('#descripcion-swiper', {
-        direction: 'horizontal',
-        slidesPerView: 1,
-        slidesPerView: 'auto',
-        nextButton: '#descripcion-next',
-        prevButton: '#descripcion-prev',
-        loop: true
-    });
+    <script type="text/javascript" src="transitions.js">
+
     </script>
   </body>
 </html>

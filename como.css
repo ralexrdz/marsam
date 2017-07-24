@@ -1,0 +1,30 @@
+#como {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: #003865;
+}
+
+  #como .texto {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: left;
+    padding: 0 15%;
+  }
+
+    #como .texto h2{
+      font-size: 28px;
+    }
+    #como .texto h4{
+      font-size: 18px;
+      line-height: 26px;
+      font-family: "Clan OT Medium";
+    }
+    #como .texto h4{
+      font-size: 14px;
+      line-height: 20px;
+      font-family: "Clan OT Book";
+    }

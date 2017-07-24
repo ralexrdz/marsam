@@ -1,0 +1,60 @@
+#cotiza {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  color: #003865;
+  padding: 0 30px;
+  text-align: left;
+}
+
+  #cotiza .texto {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+  }
+
+    #cotiza .texto h2.frase {
+      font-size: 20px;
+      line-height: 40px;
+    }
+    #cotiza .texto p.parrafo {
+      margin-bottom: 25px;
+    }
+    #cotiza .texto .paquete {
+      color: #003865;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 20px;
+      font-family: "Clan OT Medium";
+    }
+      #cotiza .texto .paquete .flechita {
+        width: 0px;
+        height: 0px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 11px solid  #F1B434;
+        display: inline-block;
+      }
+
+      #cotiza .texto .paquete span {
+        vertical-align: top;
+        margin-left: 5px;
+      }
+
+
+    #cotiza .texto .cotiza {
+      margin-top: 36px;
+    }
+
+      #cotiza .texto .cotiza button{
+        border: 3px solid #F1B434;
+        background-color: transparent;
+        width: 222px;
+        height: 52px;
+        color: #F1B434;
+        text-align: center;
+        padding: 15px;
+        font-weight: bolder;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }

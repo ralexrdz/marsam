@@ -1,0 +1,43 @@
+#sistema {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 5fr 2fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  color: #003865;
+}
+
+  #sistema .dibujos {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #sistema .slider {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color:#8E9AAF;
+    font-size: 11px;
+    line-height: 16px;
+    font-family: "Clan OT Medium";
+    text-align: left;
+  }
+
+    #sistema .slider .raya {
+      height: 70vh;
+      border-left: 2px solid #F1B434;
+      position: relative;
+      left: 40%;
+      margin-top: 10px;
+    }
+
+      #sistema .slider .raya .circulo{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #F1B434;
+        position: relative;
+        left:-6px;
+      }

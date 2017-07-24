@@ -1,0 +1,175 @@
+#home {
+  display: grid;
+  grid-template-columns: 4fr 5fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  color: white;
+}
+
+  #home .centro {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    z-index: 2;
+    text-align: left;
+    position: relative;
+  }
+
+    #home .centro h2 {
+      font-family: "Clan OT Medium";
+      line-height: 35px;
+      font-size: 38px;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+    #home .centro h3 {
+      font-family: 'Clan OT Thin';
+      font-size: 38px;
+      margin: 20px 0;
+    }
+
+    #home .centro p {
+      font-weight: normal;
+      line-height: 26px;
+    }
+
+    #home .centro > div {
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+  #home .scroll {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    z-index: 2;
+    position: relative;
+  }
+
+  #home .scroll .texto {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  @-webkit-keyframes scrollDown {
+  0% {
+    top: 14px;
+    opacity: 0;
+  }
+  15% {
+    top: 14px;
+    opacity: 1;
+  }
+  30% {
+    top: 14px;
+    opacity: 1;
+  }
+  45% {
+    top: 34px;
+    opacity: 1;
+  }
+  100% {
+    top: 34px;
+    opacity: 0;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    top: 14px;
+    opacity: 0;
+  }
+  15% {
+    top: 14px;
+    opacity: 1;
+  }
+  30% {
+    top: 14px;
+    opacity: 1;
+  }
+  45% {
+    top: 34px;
+    opacity: 1;
+  }
+  100% {
+    top: 34px;
+    opacity: 0;
+  }
+}
+
+.scroll__down {
+  position: relative;
+  top: 50%;
+  bottom: -44px;
+  left: 25px;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.scroll__mouse {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 54px;
+  margin: 0 auto;
+  border: 2px solid #F1B434;
+  border-radius: 20px;
+}
+.scroll__wheel {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  width: 4px;
+  height: 4px;
+  background-color: #F1B434;
+  border-radius: 50%;
+  -webkit-animation: scrollDown 2.5s infinite;
+          animation: scrollDown 2.5s infinite;
+}
+
+
+    #home .centro > div > .icono .punto{
+      background-color: #F1B434;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+  #home .imagen {
+    grid-column: 1 / 5;
+    grid-row: 1 / 6;
+    overflow:hidden;
+    text-align: center;
+  }
+
+    #home .imagen img {
+        height: 100%;
+        min-width:100%;
+        max-width:none;
+        margin:0 -100%;
+    }
+
+  #home .rayita {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    border-bottom: 2px solid #F1B434;
+    position: relative;
+  }
+
+    #home .rayita .puntito {
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: #F1B434;
+      left: 0; top: 99%;
+    }

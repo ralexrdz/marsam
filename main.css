@@ -1,0 +1,330 @@
+@font-face {
+  font-family: "Clan OT Thin";
+  src: url('Clan-OT-Thin.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Clan OT Bold";
+  src: url('Clan-OT-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Clan OT Regular";
+  src: url('Clan-OT-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  src: url('Clan-OT-Medium.ttf') format("truetype");
+  font-family: "Clan OT Medium";
+}
+
+
+html, body {
+    font-family: "Clan OT Regular", Verdana, Tahoma;
+    position: relative;
+    height: 100%;
+
+}
+body {
+    font-size: 18px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-scrollbar {
+  border-radius: 0px;
+}
+.swiper-scrollbar-drag {
+  background-color: #F1B434;
+  height: 10px;
+  border-radius: 0%;
+}
+
+#pager .swiper-pagination-bullet-active {
+  background: #F1B434;
+}
+#pasos-swiper .swiper-pagination-bullet-active {
+  background: white;
+}
+
+body #logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #003865;
+  z-index: 10;
+  text-align: center;
+  cursor: pointer;
+}
+
+  body #logo > span {
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    display: block;
+    height: 6px;
+    width: 70%;
+    border-radius: 9px;
+    margin-top: 8px;
+    margin-left: 15%;
+    opacity: 0;
+  }
+
+  body #logo:hover > span{
+    opacity: 1;
+    background-color: #F1B434;
+  }
+
+  body #logo img {
+    width: 40px;
+    position: absolute;
+    top: 10px; left: 6px;
+    opacity: 1;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+  }
+
+  body #logo:hover img{
+    opacity: 0;
+  }
+
+
+.swiper-slide > div {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+#menu {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-color: #003865;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  z-index: 0;
+}
+
+#menu.active{
+  z-index: 100;
+  opacity: 1;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
+}
+
+
+    #menu .close-button {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      height: 50px;
+      width: 50px;
+      box-sizing: border-box;
+      line-height: 50px;
+      display: inline-block;
+    }
+    #menu .close-button:hover {
+      cursor: pointer;
+    }
+    #menu .close-button:before,
+    #menu .close-button:after {
+      transform: rotate(-45deg);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -5px;
+      margin-left: -25px;
+      display: block;
+      height: 10px;
+      width: 50px;
+      background-color: #fff;
+      transition: all 0.2s ease-out;
+    }
+    #menu .close-button:after {
+      transform: rotate(45deg);
+    }
+    #menu .close-button:hover:before,
+    #menu .close-button:hover:after {
+      transform: rotate(0deg);
+    }
+
+  #menu .centro {
+    grid-column: 2 / 3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+    #menu .centro a {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.8
+    }
+
+    #menu .centro a:hover {
+      text-decoration: underline;
+      color: inherit;
+      opacity: 1;
+      text-decoration-color: rgba(255,255,255,0.5) ;
+    }
+
+    #menu .centro h1{
+      font-family: "Clan OT Thin";
+      font-size: 40px;
+      margin-top: 50px;
+      margin-bottom: 4px;
+      font-weight: normal;
+    }
+
+    #menu .centro p{
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+
+    /* Global Button Styles */
+  animated-button:link, .animated-button:visited {
+    	position: relative;
+    	display: block;
+    	margin: 30px auto 0;
+    	padding: 14px 15px;
+    	color: #fff;
+    	font-size:14px;
+    	font-weight: bold;
+    	text-align: center;
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	overflow: hidden;
+    	letter-spacing: .08em;
+    	border-radius: 0;
+    	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    	-webkit-transition: all 1s ease;
+    	-moz-transition: all 1s ease;
+    	-o-transition: all 1s ease;
+    	transition: all 1s ease;
+    }
+    .animated-button:link:after, .animated-button:visited:after {
+    	content: "";
+    	position: absolute;
+    	height: 0%;
+    	left: 50%;
+    	top: 50%;
+    	width: 150%;
+    	z-index: -1;
+    	-webkit-transition: all 0.75s ease 0s;
+    	-moz-transition: all 0.75s ease 0s;
+    	-o-transition: all 0.75s ease 0s;
+    	transition: all 0.75s ease 0s;
+    }
+    .animated-button:link:hover, .animated-button:visited:hover {
+    	color: #FFF;
+    	text-shadow: none;
+    }
+    .animated-button:link:hover:after, .animated-button:visited:hover:after {
+    	height: 450%;
+    }
+    .animated-button:link, .animated-button:visited {
+    	position: relative;
+    	display: block;
+    	margin: 30px auto 0;
+    	padding: 14px 15px;
+    	color: #fff;
+    	font-size:14px;
+    	border-radius: 0;
+    	font-weight: bold;
+    	text-align: center;
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	overflow: hidden;
+    	letter-spacing: .08em;
+    	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    	-webkit-transition: all 1s ease;
+    	-moz-transition: all 1s ease;
+    	-o-transition: all 1s ease;
+    	transition: all 1s ease;
+    }
+
+    /* Thar Buttons */
+
+    .animated-button.thar-three {
+    	color: #fff;
+    	cursor: pointer;
+    	display: block;
+    	position: relative;
+    	border: 2px solid #F7CA18;
+    	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
+    }
+    .animated-button.thar-three:hover {
+    	color: #003865 !important;
+    	background-color: transparent;
+    	text-shadow: nthree;
+    }
+    .animated-button.thar-three:hover:before {
+    	left: 0%;
+    	right: auto;
+    	width: 100%;
+    }
+    .animated-button.thar-three:before {
+    	display: block;
+    	position: absolute;
+    	top: 0px;
+    	right: 0px;
+    	height: 100%;
+    	width: 0px;
+    	z-index: -1;
+    	content: '';
+    	color: #003865 !important;
+    	background: #F7CA18;
+    	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
+    }

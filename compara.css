@@ -1,0 +1,96 @@
+#compara{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+  #compara .imagen {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    overflow:hidden;
+    text-align: center;
+  }
+
+    #compara .imagen img {
+      height: 60%;
+      min-width: 70%;
+      max-width: none;
+      margin: 20% -100%;
+    }
+
+  #compara .texto {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: #003865;
+    text-align: left;
+  }
+    #compara .texto div {
+      grid-row-start: 4;
+      grid-row-end: 5;
+      font-weight: bolder;
+    }
+
+      #compara .texto h2{
+        font-size: 28px;
+      }
+      #compara .texto h4{
+        font-family: "Clan OT Medium";
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+      #compara .texto p{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      #compara .texto .tip{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+      }
+        #compara .texto .tip .flechita {
+          width: 0px;
+          height: 0px;
+          border-top: 11px solid transparent;
+          border-bottom: 11px solid transparent;
+          border-left: 11px solid  #F1B434;
+          display: inline-block;
+        }
+
+        #compara .texto .tip span {
+          color: #003865;
+          font-size: 14px;
+          line-height: 22px;
+          font-family: "Clan OT Medium";
+          vertical-align: top;
+          margin-left: 5px;
+          vertical-align: top;
+          margin-left: 5px;
+        }
+        #compara .texto .tip span br{
+          margin-bottom: 5px;
+        }
+
+
+        #compara .texto .compara{
+          margin-top: 36px;
+        }
+
+          #compara .texto .compara button{
+            border: 3px solid #F1B434;
+            background-color: transparent;
+            width: 222px;
+            height: 52px;
+            color: #F1B434;
+            text-align: center;
+            padding: 15px;
+            font-weight: bolder;
+            font-size: 14px;
+            letter-spacing: 3px;
+          }
